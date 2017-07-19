@@ -60,8 +60,8 @@
     require_once("phpmailer/class.smtp.php");
     
     $sendmail = new PHPMailer();
-    $sendmail->setFrom('hakko@tsuchiya-mfg.co.id','IT Helpdesk Tiket'); //email pengirim
-    $sendmail->addReplyTo('hakko@tsuchiya-mfg.co.id','Hakko Bio Richard'); //email replay
+    $sendmail->setFrom('hakkobiorichard@outlook.com','IT Helpdesk Tiket'); //email pengirim
+    $sendmail->addReplyTo('hakkobiorichard@outlook.com','Hakko Bio Richard'); //email replay
     $sendmail->addAddress("$email","$nama"); //email tujuan
     //$sendmail->AddBCC("$email");
     $sendmail->Subject = "Tiket IT Helpdesk $id_tiket"; //subjek email
@@ -152,13 +152,13 @@
 			</div>
             
            	<div>
-            <a href="dataticket.php">Data Ticket</a>
+            <a href="datatiket.php">Data Ticket</a>
 		      	<input type="submit" onclick="notifikasi()" name="input" id="input" value="Send Message">
 		    </div>
 		</fieldset>
 		
 	</form>
-<center>Copyright &copy; <a href="http://www.hakkoblogs.com">IT System Development</a></center><br /><br />
+<center>Copyright &copy; <a href="http://www.hakkoblogs.com">2017 www.hakkoblogs.com</a></center><br /><br />
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 
            <!-- <script>
