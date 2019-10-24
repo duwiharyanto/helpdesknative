@@ -2,8 +2,8 @@
 /* Database connection start */
 $servername = "localhost";
 $username = "root";
-$password = "";
-$dbname = "isd";
+$password = "root";
+$dbname = "tiket";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
 
@@ -71,7 +71,12 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
     $nestedData[] = $row["email"];
     $nestedData[] = $row["departemen"];
     $nestedData[] = $row["problem"];
-    $nestedData[] = $row["status"];
+    if(trim(strtolower($row["status"]))=='close'){
+    	$status="<span class='label label-success'>".$row["status"]."</span>";
+    }else{
+    	$status="<span class='label label-danger'>".$row["status"]."</span>";
+    }
+    $nestedData[] = $status;
 
    
     //$nestedData[] = number_format($total,0,",",".");		

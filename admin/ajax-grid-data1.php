@@ -2,8 +2,8 @@
 /* Database connection start */
 $servername = "localhost";
 $username = "root";
-$password = "";
-$dbname = "isd";
+$password = "root";
+$dbname = "tiket";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
 

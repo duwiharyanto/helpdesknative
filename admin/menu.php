@@ -54,7 +54,8 @@
                                 </div>
                             </li>
                         </ul>
-                    </li>   
+                    </li>
+                    <li class="bold"><a href="../logout.php" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i>Logout</a>                      
                 </ul>
                 <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only darken-2"><i class="mdi-navigation-menu" ></i></a>
             </aside>

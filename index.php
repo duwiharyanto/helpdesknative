@@ -14,7 +14,7 @@
     <script src="dist/sweetalert-dev.js"></script>
     <link rel="stylesheet" href="dist/sweetalert.css">
     
-	<title>Aplikasi Tikecting Helpdesk IT | www.hakkoblogs.com</title>
+	<title>Aplikasi Tikecting Helpdesk IT | IT RS UII</title>
 </head>
 <body>
 
@@ -67,7 +67,9 @@
     $sendmail->Subject = "Tiket IT Helpdesk $id_tiket"; //subjek email
     $sendmail->Body=$laporan; //isi pesan dalam format laporan
     $sendmail->isHTML(true);
-	if(!$sendmail->Send()) 
+    //$statusemail=$sendmail->Send()
+	$statusemail=true;
+    if(!$statusemail) 
 	{
 		echo "Email gagal dikirim : " . $sendmail->ErrorInfo;  
 	} 
@@ -105,8 +107,9 @@
 			?>
 
 	<form class="cd-form floating-labels" method="POST" action="index.php">
+        <img src="img/header.jpg" width="300px" height="80px">
 		<fieldset>
-			<legend>Ticketing Helpdesk IT | www.hakkoblogs.com</legend>
+			<legend>Ticketing Helpdesk IT | IT RS UII</legend>
             
             
             <li>Isi Ticket dengan baik agar jelas informasinya.</li><br />
@@ -134,15 +137,18 @@
 		    	<label class="cd-label" for="cd-email">Departemen</label>
 				<select class="email" name="departemen" id="departemen" required>
                 <option value=""></option>
-                <option value="PPIC">PPIC</option>
-                <option value="Engineering">Engineering</option>
-                <option value="Maintenance">Maintenance</option>
-                <option value="Accounting">Accounting</option>
-                <option value="HRD & GA">HRD & GA</option>
-                <option value="Injection">Injection</option>
-                <option value="QC">QC</option>
-                <option value="Press">Press</option>
-                <option value="Printing">Printing</option>
+                <option value="Admisi">Admisi</option>
+                <option value="Farmasi">Farmasi</option>
+                <option value="Billing">Billing</option>
+                <option value="Poli Lantai 1">Poli Lantai 1</option>
+                <option value="Poli Lantai 2">Poli Lantai 2</option>
+                <option value="Poli Anak">Poli Anak</option>
+                <option value="IGD">IGD</option>
+                <option value="MPR">MPR</option>
+                <option value="HR & GA">HR & GA</option>
+                <option value="Gizi">Gizi</option>
+                <option value="Gudang">Gudang</option>
+                <option value="Lainnya">Lainnya</option>
                 </select>
 		    </div>
             
@@ -152,13 +158,13 @@
 			</div>
             
            	<div>
-            <a href="datatiket.php">Data Ticket</a>
-		      	<input type="submit" onclick="notifikasi()" name="input" id="input" value="Send Message">
+            <a href="datatiket.php" class="btn btn-info">Data Ticket</a>
+		    <input type="submit" onclick="notifikasi()" name="input" id="input" value="Send Message">
 		    </div>
 		</fieldset>
 		
 	</form>
-<center>Copyright &copy; <a href="http://www.hakkoblogs.com">2017 www.hakkoblogs.com</a></center><br /><br />
+<center>Copyright &copy; <a href="http://IT RS UII">2017 IT RS UII</a></center><br /><br />
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 
            <!-- <script>

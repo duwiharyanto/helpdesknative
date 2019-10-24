@@ -138,7 +138,9 @@ $_SESSION['start_time'] = time();
     $sendmail->Subject = "Tiket IT Helpdesk $id_tiket"; //subjek email
     $sendmail->Body=$laporan; //isi pesan dalam format laporan
     $sendmail->isHTML(true);
-	if(!$sendmail->Send()) 
+	  //$statusemail=$sendmail->Send(); 
+    $statusemail=true;
+  if(!$statusemail) 
 	{
 		echo "Email gagal dikirim : " . $sendmail->ErrorInfo;  
 	} 
@@ -199,7 +201,7 @@ $_SESSION['start_time'] = time();
                       <div class="row">
                         <div class="input-field col s12">
                           <!-- <i class="mdi-communication-email prefix"></i> -->
-                          <input id="email" name="email" value="<?php echo $row['email']; ?>" type="email" readonly="readonly">
+                          <input id="email" name="email" value="<?php echo $row['email']; ?>" type="email" ">
                           <label for="Email">Email</label>
                         </div>
                       </div>
